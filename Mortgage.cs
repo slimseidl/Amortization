@@ -15,9 +15,10 @@ namespace Amortization
             return payment;
         }
 
-        public double MonthlyPayment(int principal, double rate, int numPayments, double taxRate, double annualInsurance)
+        public double MonthlyPayment(int principal, double rate, int numPayments, int downPayment, double taxRate, double annualInsurance)
         {
-            double basePayment = MonthlyPayment(principal, rate, numPayments);
+            int loanAmount = principal - downPayment;
+            double basePayment = MonthlyPayment(loanAmount, rate, numPayments);
             double monthlyTax = (principal * (taxRate / 100)) / 12;
             double monthlyInsurance = annualInsurance / 12;
 

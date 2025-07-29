@@ -136,10 +136,12 @@ namespace UI
                 double monthlyIns = Math.Round(insuranceCost / 12, 2);
                 double monthlyTax = Math.Round((taxRate / 100 / 12) * principal, 2);
 
-                lblResult.Text = $"Base Payment: ${basePayment}\n" +
-                                 $"+ Insurance: ${monthlyIns}\n" +
-                                 $"+ Tax: ${monthlyTax}\n" +
-                                 $"= Total: ${fullPayment}";
+                lblResult.Text = $"Payment Breakdown:\n\n" +
+                 $"Base Payment: ${basePayment.ToString("N2")}\n" +
+                 $"+ Insurance: ${monthlyIns.ToString("N2")}\n" +
+                 $"+ Tax: ${monthlyTax.ToString("N2")}\n" +
+                 $"= Total: ${fullPayment.ToString("N2")}";
+
             }
             catch (Exception ex)
             {

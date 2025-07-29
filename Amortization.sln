@@ -5,7 +5,7 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amortization", "Amortization\Amortization.csproj", "{77F2173A-6EBC-3490-9059-0BFE739C0E9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmortizationUI", "AmortizationUI\AmortizationUI.csproj", "{DCEFBD11-1733-55A8-B095-83FD0F8F74BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI\UI.csproj", "{165F3C02-3D37-47FE-804C-CF2026E0D63F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{77F2173A-6EBC-3490-9059-0BFE739C0E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77F2173A-6EBC-3490-9059-0BFE739C0E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77F2173A-6EBC-3490-9059-0BFE739C0E9E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DCEFBD11-1733-55A8-B095-83FD0F8F74BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DCEFBD11-1733-55A8-B095-83FD0F8F74BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DCEFBD11-1733-55A8-B095-83FD0F8F74BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DCEFBD11-1733-55A8-B095-83FD0F8F74BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{165F3C02-3D37-47FE-804C-CF2026E0D63F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{165F3C02-3D37-47FE-804C-CF2026E0D63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{165F3C02-3D37-47FE-804C-CF2026E0D63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{165F3C02-3D37-47FE-804C-CF2026E0D63F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

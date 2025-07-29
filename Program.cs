@@ -142,6 +142,6 @@ Console.WriteLine($"Your base monthly payments is: ${basePayment}");
 Console.WriteLine($"Your monthly insurance cost is ${monthlyIns}");
 Console.WriteLine($"Your monthly property tax cost is: ${monthlyTax}");
 Console.WriteLine($"This brings your total monthly payment value to: ${fullPayment}");
-Console.WriteLine("\n**********Note: property tax and insurance rates are calculated from averages in each state in 2024**********");
+Console.WriteLine("\n********** Note: property tax and insurance rates are calculated from averages in each state in 2024 **********");
 
 Console.ReadLine();

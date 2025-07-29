@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Amortization
 {
-    internal class Mortgage
+    public class Mortgage
     {
         public double MonthlyPayment(int loanAmount, double rate, int numPayments)
         {

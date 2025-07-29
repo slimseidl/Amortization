@@ -8,4 +8,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Amortization.csproj" />
+    <ProjectReference Include="..\Amortization\Amortization.csproj" />
+  </ItemGroup>
+
 </Project>

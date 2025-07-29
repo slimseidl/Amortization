@@ -112,7 +112,7 @@ var insuranceRates = new Dictionary<string, int>
 
 Mortgage mortgage =  new Mortgage();
 
-Console.WriteLine("Please enter your state of residency: ");
+Console.WriteLine("Please enter the full name of your state of residency: ");
 string stateID = Console.ReadLine().Trim().ToLower();
 
 Console.WriteLine("Enter the price of the property:");
@@ -121,7 +121,9 @@ int principal = int.Parse(Console.ReadLine());
 Console.WriteLine("Enter the down payment amount:");
 int downPayment = int.Parse(Console.ReadLine());
 
-Console.WriteLine("Enter Loan Term in Years:");
+int loanAmount = principal - downPayment;
+
+Console.WriteLine("Enter loan term in years:");
 int numPayments = int.Parse(Console.ReadLine()) * 12;
 
 Console.WriteLine("Enter your interest rate:");
@@ -131,7 +133,15 @@ double taxRate = propertyTaxRates[stateID];
 double insuranceCost = insuranceRates[stateID];
 
 
-double payment = mortgage.MonthlyPayment(principal, interestRate, numPayments, downPayment, taxRate, insuranceCost);
-Console.WriteLine($"Your monthly payment is: {payment}");
+double fullPayment = mortgage.MonthlyPayment(principal, interestRate, numPayments, downPayment, taxRate, insuranceCost);
+double basePayment = mortgage.MonthlyPayment(loanAmount, interestRate, numPayments);
+double monthlyIns = Math.Round(insuranceCost / 12,2);
+double monthlyTax = Math.Round((taxRate / 100 / 12) * (principal),2);
+
+Console.WriteLine($"Your base monthly payments is: ${basePayment}");
+Console.WriteLine($"Your monthly insurance cost is ${monthlyIns}");
+Console.WriteLine($"Your monthly property tax cost is: ${monthlyTax}");
+Console.WriteLine($"This brings your total monthly payment value to: ${fullPayment}");
+Console.WriteLine("\n**********Note: property tax and insurance rates are calculated from averages in each state in 2024**********");
 
 Console.ReadLine();

@@ -9,9 +9,9 @@ namespace Amortization
 {
     internal class Mortgage
     {
-        public double MonthlyPayment(int principal, double rate, int numPayments)
+        public double MonthlyPayment(int loanAmount, double rate, int numPayments)
         {
-            double payment = Math.Round(principal * ((rate * Math.Pow((1 + rate), numPayments)) / (Math.Pow((1 + rate), numPayments) - 1)), 2);
+            double payment = Math.Round(loanAmount * ((rate * Math.Pow((1 + rate), numPayments)) / (Math.Pow((1 + rate), numPayments) - 1)), 2);
             return payment;
         }
 

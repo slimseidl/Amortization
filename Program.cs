@@ -108,7 +108,12 @@ var insuranceRates = new Dictionary<string, int>
     {"Wyoming", 1306}
 };
 
+
+
 Mortgage mortgage =  new Mortgage();
+
+Console.WriteLine("Please enter your state of residency: ");
+string stateID = Console.ReadLine();
 
 Console.WriteLine("Enter the price of the property:");
 int principal = int.Parse(Console.ReadLine());
@@ -117,9 +122,13 @@ Console.WriteLine("Enter Loan Term in Years:");
 int numPayments = int.Parse(Console.ReadLine()) * 12;
 
 Console.WriteLine("Enter your interest rate:");
-double rate = double.Parse(Console.ReadLine()) / 12 / 100;
+double interestRate = double.Parse(Console.ReadLine()) / 12 / 100;
 
-double payment = mortgage.MonthlyPayment(principal, rate, numPayments);
+double taxRate = propertyTaxRates[stateID];
+double insuranceCost = insuranceRates[stateID];
+
+
+double payment = mortgage.MonthlyPayment(principal, interestRate, numPayments, taxRate, insuranceCost);
 Console.WriteLine($"Your monthly payment is: {payment}");
 
 Console.ReadLine();
